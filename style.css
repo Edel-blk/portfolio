@@ -1,0 +1,103 @@
+body {
+  background-color: #34353A;
+  color: white;
+}
+
+.header h1 {
+  color: #FFD670;
+}
+
+.header {
+  display: flex;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+}
+
+.cover img {
+  width: 60ch;
+  filter: grayscale(1);
+}
+
+.cover span {
+  color: #FFD670;
+  font-size: 45px;
+}
+
+.cover button {
+  background: transparent;
+  border: 1px solid #ffd670;
+  color: #FFD670;
+  border-radius: 5px;
+  padding: 10px 50px;
+}
+
+.cover div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+}
+
+.skills img {
+  width: 8ch;
+}
+
+.card {
+  display: flex;
+  background-color: #3D3E42;
+  border-radius: 5px;
+  padding: 20px;
+  width: 18ch;
+  height: 19ch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 250ms linear; 
+}
+
+.card h3 {
+  margin: 0px;
+  margin-top: 15px;
+}
+
+.card:hover {
+  background-color: #F0BF6C;
+  transform: scale(1.1);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100ch;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+}
