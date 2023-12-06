@@ -1,6 +1,7 @@
 body {
   background-color: #34353A;
   color: white;
+  font-family: system-ui;
 }
 
 .header h1 {
@@ -24,6 +25,11 @@ body {
 .header a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.header a:hover {
+  border-bottom: 1px solid #FFD670;
 }
 
 .cover {
@@ -34,19 +40,35 @@ body {
 .cover img {
   width: 60ch;
   filter: grayscale(1);
+  margin-left: 40px;
 }
 
-.cover span {
+.cover h2 {
   color: #FFD670;
   font-size: 45px;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.cover h3 {
+  margin-top: 0px;
 }
 
 .cover button {
+  font-weight: bold;
   background: transparent;
   border: 1px solid #ffd670;
   color: #FFD670;
   border-radius: 5px;
   padding: 10px 50px;
+  transition: 250ms linear;
+}
+
+.cover button:hover {
+  background-color: #FFD670;
+  color: #34353A;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .cover div {
@@ -92,10 +114,105 @@ body {
   grid-gap: 20px;
 }
 
+.timeline {
+  display: flex;
+  margin: 0px auto;
+  width: 60ch;
+  margin-top: 15px;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.timeline-dot {
+  height: 3ch;
+  width: 3ch;
+  background: #F0BF6C;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 15px #F0BF6C;
+}
+
+.timeline-line {
+  border-left: 2px solid white;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.year {
+  font-weight: bold;
+}
+
+.carrusel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.carrusel-card {
+  position: relative;
+  width: 30ch;
+  height: 30ch;
+}
+
+.carrusel-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 30ch;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #464849b8;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.carrusel-card:hover .overlay {
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.carrusel-text {
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.btn {
+  text-decoration: none;
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  background: #F0BF6C;
+  border-radius: 5px;
+  border: 1px solid #3D3E42;
+  padding: 5px 15px 5px 15px;
+  color: #3D3E42;
+  font-family: system-ui;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 768px) {
   body {
     margin: 0 auto;
-    width: 100%;
     max-width: 100ch;
     padding: 1rem;
     line-height: 1.5;
